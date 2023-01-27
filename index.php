@@ -14,7 +14,8 @@
         $username = $_POST['full_name'];
         $number = $_POST['number'];
         $email = $_POST['email'];
-        if($query = mysqli_query($connect,"INSERT INTO first_user (`fullname`, `phone_number`, `email`) VALUES ('".$username."', '".$number."', '".$email."')")){
+        if($query = mysqli_query($connect,"INSERT INTO first_user (`fullname`, `phone_number`, `email`) 
+        VALUES ('".$username."', '".$number."', '".$email."')")){
             echo "Success";
         }else{
             echo "Failure" . mysqli_error($connect);
